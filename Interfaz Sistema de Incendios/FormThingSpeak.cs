@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Interfaz_Sistema_de_Incendios
@@ -15,14 +8,27 @@ namespace Interfaz_Sistema_de_Incendios
         public FormThingSpeak()
         {
             InitializeComponent();
-            this.Load += new System.EventHandler(this.FormThingSpeak_Load);
+            this.Load += FormThingSpeak_Load;
         }
 
-        private void FormThingSpeak_Load(object sender, EventArgs e)
+        private async void FormThingSpeak_Load(object sender, EventArgs e)
         {
-            string url = "https://thingspeak.com/channels/2959270/charts/1?api_key=MNH1MTGB6RS3YLS2"; 
-            webBrowserThingSpeak.Navigate(url);
+            string grafica1 = "https://thingspeak.com/channels/2959270/charts/1?bgcolor=%23ffffff&dynamic=true&type=line&results=60";
+            string grafica2 = "https://thingspeak.mathworks.com/channels/2959270/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15";
+            string grafica3 = "https://thingspeak.mathworks.com/channels/2959270/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15";
+
+            await webView21.EnsureCoreWebView2Async();
+            await webView22.EnsureCoreWebView2Async();
+            await webView23.EnsureCoreWebView2Async();
+
+            webView21.Source = new Uri(grafica1);
+            webView22.Source = new Uri(grafica2);
+            webView23.Source = new Uri(grafica3);
         }
 
+        private void webView22_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -36,6 +36,7 @@ namespace AlarmaGas
             this.panelReloj = new System.Windows.Forms.Panel();
             this.btnVerGrafica = new System.Windows.Forms.Button();
             this.lblConexionESP = new System.Windows.Forms.Label();
+            this.btnThingSpeak = new System.Windows.Forms.Button();
             this.panelInfo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -149,19 +150,6 @@ namespace AlarmaGas
             this.btnBorrar.Text = "Borrar registros";
             this.btnBorrar.UseVisualStyleBackColor = false;
             this.btnBorrar.Click += new System.EventHandler(this.buttonborrar_Click);
-            // btnThingSpeak
-            this.btnThingSpeak = new System.Windows.Forms.Button();
-            this.btnThingSpeak.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnThingSpeak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThingSpeak.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnThingSpeak.ForeColor = System.Drawing.Color.White;
-            this.btnThingSpeak.Location = new System.Drawing.Point(346, 415);
-            this.btnThingSpeak.Name = "btnThingSpeak";
-            this.btnThingSpeak.Size = new System.Drawing.Size(120, 35);
-            this.btnThingSpeak.TabIndex = 6;
-            this.btnThingSpeak.Text = "Ver Online";
-            this.btnThingSpeak.UseVisualStyleBackColor = false;
-            this.btnThingSpeak.Click += new System.EventHandler(this.btnThingSpeak_Click);
             // 
             // lblTitulo
             // 
@@ -218,10 +206,24 @@ namespace AlarmaGas
             this.lblConexionESP.Text = "ESP32 Desconectado";
             this.lblConexionESP.Visible = false;
             // 
+            // btnThingSpeak
+            // 
+            this.btnThingSpeak.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnThingSpeak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThingSpeak.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnThingSpeak.ForeColor = System.Drawing.Color.White;
+            this.btnThingSpeak.Location = new System.Drawing.Point(346, 415);
+            this.btnThingSpeak.Name = "btnThingSpeak";
+            this.btnThingSpeak.Size = new System.Drawing.Size(120, 35);
+            this.btnThingSpeak.TabIndex = 6;
+            this.btnThingSpeak.Text = "Ver Online";
+            this.btnThingSpeak.UseVisualStyleBackColor = false;
+            this.btnThingSpeak.Click += new System.EventHandler(this.btnThingSpeak_Click);
+            // 
             // Form1
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 469);
             this.Controls.Add(this.lblConexionESP);
             this.Controls.Add(this.btnVerGrafica);
             this.Controls.Add(this.panelInfo);
