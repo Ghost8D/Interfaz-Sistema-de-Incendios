@@ -106,6 +106,9 @@ namespace AlarmaGas
             lblConexionESP.Top = btnBorrar.Bottom + 10;
             btnVerGrafica.Left = (this.ClientSize.Width - btnVerGrafica.Width) / 2;
             btnVerGrafica.Top = lblConexionESP.Bottom + 10;
+            btnThingSpeak.Left = (this.ClientSize.Width - btnThingSpeak.Width) / 2;
+            btnThingSpeak.Top = btnVerGrafica.Bottom + 10;
+
         }
 
         private void buttonborrar_Click(object sender, EventArgs e)
@@ -141,6 +144,12 @@ namespace AlarmaGas
         private async void btnActualizar_Click(object sender, EventArgs e)
         {
             await ObtenerYActualizar();
+        }
+
+        private void btnThingSpeak_Click(object sender, EventArgs e)
+        {
+            FormThingSpeak ventana = new FormThingSpeak();
+            ventana.ShowDialog();
         }
 
         public class DatosSensor

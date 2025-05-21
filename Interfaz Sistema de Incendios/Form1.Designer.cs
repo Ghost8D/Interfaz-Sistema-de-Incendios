@@ -149,6 +149,19 @@ namespace AlarmaGas
             this.btnBorrar.Text = "Borrar registros";
             this.btnBorrar.UseVisualStyleBackColor = false;
             this.btnBorrar.Click += new System.EventHandler(this.buttonborrar_Click);
+            // btnThingSpeak
+            this.btnThingSpeak = new System.Windows.Forms.Button();
+            this.btnThingSpeak.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnThingSpeak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThingSpeak.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnThingSpeak.ForeColor = System.Drawing.Color.White;
+            this.btnThingSpeak.Location = new System.Drawing.Point(346, 415);
+            this.btnThingSpeak.Name = "btnThingSpeak";
+            this.btnThingSpeak.Size = new System.Drawing.Size(120, 35);
+            this.btnThingSpeak.TabIndex = 6;
+            this.btnThingSpeak.Text = "Ver Online";
+            this.btnThingSpeak.UseVisualStyleBackColor = false;
+            this.btnThingSpeak.Click += new System.EventHandler(this.btnThingSpeak_Click);
             // 
             // lblTitulo
             // 
@@ -216,6 +229,7 @@ namespace AlarmaGas
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.lblReloj);
+            this.Controls.Add(this.btnThingSpeak);
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.Name = "Form1";
             this.Text = "Sistema de Alarma de Incendios";
@@ -244,5 +258,6 @@ namespace AlarmaGas
         private System.Windows.Forms.Panel panelReloj;
         private Timer timerReloj;
         private Label lblReloj;
+        private System.Windows.Forms.Button btnThingSpeak;
     }
 }
